@@ -13,11 +13,7 @@
     </article>
 
   </div>
-
-
 </template>
-
-
 <script>
   import  Images from '../../assets/images'
   import ShoppingItem from  './ShoppingItem.vue'
