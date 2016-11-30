@@ -5,6 +5,7 @@ import App from './App'
 import VueRouter from "vue-router"
 import User from "./views/user/User.vue"
 import ShoppingList from "./views/shopping/ShoppingList.vue"
+import ShoppingCon from "./views/shopping/ShoppingCon.vue"
 import Cart from "./views/cart/Cart.vue"
 
 
@@ -26,7 +27,13 @@ const routes = [
         path: "/user/:id",
         component: User,
       meta:{title:'用户中心'}
-    }
+    },
+  {
+    path: "/shoppingcon/:id",
+    name:'shoppingcon',
+    component: ShoppingCon,
+    meta:{title:'文章内容'}
+  }
 ]
 
 

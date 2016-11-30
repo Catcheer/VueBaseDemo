@@ -1,5 +1,6 @@
 <template>
     <div>
+      <router-link :to="{name:'shoppingcon',params:{id:2}}">
       <div class="box_list pad_2 dis_flex">
         <div class="l_img">
           <img  :src='item.shopLogo'>
@@ -10,11 +11,12 @@
             {{item.desText}}
           </p>
           <div class="dis_flex color_ccc">
-            <div class="flex_width"><span class="dis_in_bok">{{item.likes}}</span>{{item.reader}}</div>
+            <div class="flex_width"><span class="dis_in_bok" v-on:click="addCouner">{{counter}}</span>{{item.reader}}</div>
             {{item.publishTime}}
           </div>
         </div>
       </div>
+      </router-link>
     </div>
 </template>
 
@@ -24,8 +26,15 @@
         data(){
             return{
 //              Images
+              counter:this.item.likes
+
             }
         },
+      methods:{
+          addCouner(){
+            this.counter++;
+          },
+      },
         components:{
 
         }

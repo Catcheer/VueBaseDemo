@@ -74,7 +74,9 @@
         Images
       }
     },
-    methods: {},
+    methods: {
+
+    },
     computed: {},
     components: {
       ShoppingItem
