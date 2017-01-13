@@ -7,7 +7,9 @@ import User from "./views/user/User.vue"
 import ShoppingList from "./views/shopping/ShoppingList.vue"
 import ShoppingCon from "./views/shopping/ShoppingCon.vue"
 import Cart from "./views/cart/Cart.vue"
-
+import ToDO from "./views/cart/ToDo.vue"
+import GetterTest from "./views/cart/GetterTest.vue"
+import {store} from "./store/store"
 
 
 Vue.use(VueRouter);
@@ -33,6 +35,18 @@ const routes = [
     name:'shoppingcon',
     component: ShoppingCon,
     meta:{title:'文章内容'}
+  },
+  {
+    path: "/todo",
+    name:'todo',
+    component: ToDO,
+    meta:{title:'TODoList'}
+  },
+  {
+    path: "/getter",
+    name:'getter',
+    component: GetterTest,
+    meta:{title:'GetterTest'}
   }
 ]
 
@@ -43,6 +57,7 @@ var router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
+    store,
     el: '#app',
     router,
     render: h => h(App)

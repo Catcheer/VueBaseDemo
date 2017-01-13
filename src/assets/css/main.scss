@@ -9,7 +9,9 @@ body {
   color: #333;
   font-family: "Microsoft Yahei";
 }
-
+ul,li{
+  list-style-type: none;
+}
 body {
     font-size: 0.28rem;
     line-height: 1;
@@ -148,4 +150,32 @@ footer {
   font-size: 0.22rem;
   display: inline-block;
   line-height: 0.32rem;
+}
+
+//studentsInfo
+.info_list{
+  overflow: hidden;
+  li{
+    float: left;
+    width:20%;
+    text-align: center;
+    padding: 0.2rem 0;
+    box-sizing: border-box;
+  }
+}
+.info_input{
+  width: 80%;
+  height: 0.16rem;
+  padding:0.2rem 0.1rem;
+  border:1px solid #eee;
+  font-size: 0.22rem;
+  box-sizing: border-box;
+}
+.del_btn{
+  width: 80%;
+  height: 0.4rem;
+  background: #eee;
+  font-size: 0.24rem;
+  box-shadow: none;
+  border:none;
 }
