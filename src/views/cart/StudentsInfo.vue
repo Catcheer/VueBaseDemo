@@ -34,11 +34,12 @@
           })
       }
     },
-    /*computed:{
+    computed:{
      studentsArr(){
-     return this.$store.state.studentsArr;
+     return this.$store.state.moduleToDo.studentsArr;
+//       console.log(this.$store.state.moduleToDo.studentsArr)
      }
-     }*/
-    computed: mapState(['studentsArr'])
+     }
+//    computed: mapState(['studentsArr'])
   }
 </script>

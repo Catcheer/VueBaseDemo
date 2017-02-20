@@ -3,9 +3,12 @@
  */
 import Vue from 'vue';
 import Vuex from  'vuex';
+import * as types from '../types';
+
 
 Vue.use(Vuex);
-export const store = new Vuex.Store({
+
+const moduleToDo = {
   state: {
     studentsArr: [
       {
@@ -42,16 +45,22 @@ export const store = new Vuex.Store({
     }
   },
   getters: {
-    doneTodos: (state)=> {
+    doneTodos: (state, getters, rootState)=> {
       return state.doneTodoArr.filter((item)=>item.done)
     }
   },
   actions: {
-    remove({commit},item){
+    remove({ state, commit, rootState }, item){
       setTimeout(()=> {
-        commit('remove',item);
+        commit('remove', item);
       }, 3000)
     }
   }
+}
+
+export const store = new Vuex.Store({
+      modules:{
+        moduleToDo:moduleToDo,
+      }
 });
 
